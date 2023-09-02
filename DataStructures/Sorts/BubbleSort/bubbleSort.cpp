@@ -8,26 +8,27 @@ void swap(int* xp, int* yp) {
     *yp = temp;
 }
 
-// para cada elemento, ordena ele em relação ao próximo
-void bubbleSort(std::vector<int>& array, size_t tamanho) {
-    for (size_t i = 0; i < tamanho; i++)
-        for (size_t j = 0; j < tamanho - 1; j++)
-            if (array[j] >= array[j + 1]) 
-                swap(&array[j], &array[j + 1]);
+// Time complexity O(n²) in the worst case
+void bubbleSort(std::vector<int>& vector, size_t size) {
+    for (size_t i = 0; i < size; i++)
+        for (size_t j = 0; j < size - 1; j++)
+            if (vector[j] >= vector[j + 1]) 
+                swap(&vector[j], &vector[j + 1]);
 }
 
-void printar(std::vector<int> vetor, size_t tamanho) {
-    for(size_t i = 0; i < tamanho; i++)
-        std::cout << vetor[i] << " ";
+void print(std::vector<int> vector, size_t size) {
+    for (size_t i = 0; i < size; ++i)
+        std::cout << vector[i] << " ";
 }
+
 int main() {
-    constexpr size_t tamanho = 15;
+    constexpr size_t size = 15;
     std::random_device randomNumber;
     std::mt19937 randomSeed(randomNumber());
     std::uniform_int_distribution<int> gap(-100, 100);
-    std::vector<int> vetor;
-    for (size_t i = 0; i < tamanho; i++)
-        vetor.push_back(gap(randomSeed));
-    bubbleSort(vetor, tamanho);
-    printar(vetor, tamanho);
+    std::vector<int> vector;
+    for (size_t i = 0; i < size; ++i)
+        vector.push_back(gap(randomSeed));
+    bubbleSort(vector, size);
+    print(vector, size);
 }
