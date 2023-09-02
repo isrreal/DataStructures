@@ -1,3 +1,3 @@
 # Data Structures
 
-Studies about data structures and algorthms
+Studies about data structures and algorithms
