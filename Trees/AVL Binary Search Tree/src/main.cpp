@@ -14,7 +14,7 @@ void clearScreen() {
 int main() {
     constexpr int MIN = -100;
     constexpr int MAX = 100;
-    char option = 0;
+	int16_t option = 0;
     int input = 0;
     BinarySearchTreeAVL* avlTree = new BinarySearchTreeAVL();
     
@@ -48,43 +48,43 @@ int main() {
         std::cin >> option;
 	    clearScreen();
 	    
-        if (option == '1') {
+        if (option == 1) {
            	avlTree->preOrder();
         	std::cin.ignore(1, '\n');
 			std::cin.get();
         }
         
-        else if (option == '2') {
+        else if (option == 2) {
         	avlTree->inOrder();
 		    std::cin.ignore(1, '\n');
 			std::cin.get();
        	}
        	
-        else if (option == '3') {
+        else if (option == 3) {
         	avlTree->postOrder();
             std::cin.ignore(1, '\n');
 			std::cin.get();
         }
         
-        else if (option == '4') {
+        else if (option == 4) {
         	avlTree->getHeight();
         	std::cin.ignore(1, '\n');
 			std::cin.get();  
         }
         
-        else if (option == '5') {
+        else if (option == 5) {
         	avlTree->getSize();
         	std::cin.ignore(1, '\n');
 			std::cin.get();    
         }
         
-        else if (option == '6') {
+        else if (option == 6) {
         	avlTree->getRoot();
             std::cin.ignore(1, '\n');
 			std::cin.get();
         }
         
-        else if (option == '7') {
+        else if (option == 7) {
         	std::cout << "Insert an integer for search" << std::endl;     
 			std::cin >> input;
         	std::cout << (avlTree->exists(input) ? "Exists" : "Do not exists") << std::endl;
@@ -92,7 +92,7 @@ int main() {
 			std::cin.get();
         }
         
-        else if (option == '8') {
+        else if (option == 8) {
         	std::cout << "Insert an integer to insert" << std::endl;     
 		    
 			std::cin >> input;
@@ -104,7 +104,7 @@ int main() {
 			std::cin.get();
         }
         
-       else if (option == '9') {
+       else if (option == 9) {
        
 			std::cout << "Insert an integer to remove: ";
 			std::cin >> input;
