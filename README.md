@@ -28,6 +28,16 @@ Data structures are a critical component of computer science and programming. Th
 ## Project Structure
 
 ### **Graph/**
+### Hash Table Implementation with `std::unordered_map`
+
+The graph's adjacency list is implemented using `std::unordered_map<size_t, std::list<size_t>>`, which provides efficient storage and access for vertex connections. This data structure leverages a hash table, allowing for average-case time complexities of **O(1)** for key operations such as search, insertion, and deletion.
+
+#### Benefits of Using `std::unordered_map`:
+- **Fast Access**: The average time complexity for searching for a vertex or edge is **O(1)**, making it efficient to retrieve connected vertices.
+- **Dynamic Resizing**: `std::unordered_map` dynamically resizes as needed, accommodating changes in the number of vertices without a significant performance hit.
+- **Flexibility**: This implementation allows for easy management of sparse graphs, as it only stores edges that exist, reducing memory usage compared to dense representations.
+
+By utilizing `std::unordered_map`, graph operations can be performed quickly and efficiently, making it suitable for a variety of applications requiring dynamic graph modifications and frequent lookups.
 
 #### Features
 - **Graph Construction**: Create graphs from a specified number of vertices with a given edge probability or from an input file.
@@ -38,7 +48,6 @@ Data structures are a critical component of computer science and programming. Th
 - **Error Handling**: Mechanisms for handling file I/O errors and vertex management issues, ensuring robustness.
 - **Performance**: Optimized operations, typically operating within *O(1)* for insertion and *O(V + E)* for traversal methods.
 
----
 
 ### **Trees/**
 
