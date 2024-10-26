@@ -102,6 +102,21 @@ By utilizing `std::unordered_map`, graph operations can be performed quickly and
 ## Usage
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/isrreal/DataStructures.git
-   cd DataStructures
+   
+```bash
+git clone https://github.com/isrreal/DataStructures.git
+cd DataStructures
+```
+1.2 If you want to see operations in trees:
+
+1.3 Choose the specific tree directory you want to work with (e.g., AVL Binary Search Tree, Binary Search Tree, or Binary Tree):
+
+1.4 Compile the code:
+```bash
+make
+```
+1.5 Run the application:
+   
+```bash
+./app
+```
