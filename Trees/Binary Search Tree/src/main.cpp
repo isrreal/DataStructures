@@ -16,7 +16,7 @@ int main() {
     constexpr int MAX = 100;
     constexpr int rootValue = 1;
     
-    char option = 0;
+    int16_t option = 0;
     int input = 0;
     
     BinarySearchTree* tree = new BinarySearchTree(rootValue);
@@ -51,43 +51,43 @@ int main() {
         std::cin >> option;
 	    clearScreen();
 	    
-        if (option == '1') {
+        if (option == 1) {
            	tree->preOrder();
         	std::cin.ignore(1, '\n');
 			std::cin.get();
         }
         
-        else if (option == '2') {
+        else if (option == 2) {
         	tree->inOrder();
 		    std::cin.ignore(1, '\n');
 			std::cin.get();
        	}
        	
-        else if (option == '3') {
+        else if (option == 3) {
         	tree->postOrder();
             std::cin.ignore(1, '\n');
 			std::cin.get();
         }
         
-        else if (option == '4') {
+        else if (option == 4) {
         	tree->getHeight();
         	std::cin.ignore(1, '\n');
 			std::cin.get();  
         }
         
-        else if (option == '5') {
+        else if (option == 5) {
         	tree->getSize();
         	std::cin.ignore(1, '\n');
 			std::cin.get();    
         }
         
-        else if (option == '6') {
+        else if (option == 6) {
         	tree->getRoot();
             std::cin.ignore(1, '\n');
 			std::cin.get();
         }
         
-        else if (option == '7') {
+        else if (option == 7) {
         	std::cout << "Insert an integer for search" << std::endl;     
 			std::cin >> input;
         	std::cout << (tree->exists(input) ? "Exists" : "Do not exists") << std::endl;
@@ -95,7 +95,7 @@ int main() {
 			std::cin.get();
         }
         
-        else if (option == '8') {
+        else if (option == 8) {
         	std::cout << "Insert an integer to insert" << std::endl;     
 		    
 			std::cin >> input;
@@ -107,7 +107,7 @@ int main() {
 			std::cin.get();
         }
         
-       else if (option == '9') {
+       else if (option == 9) {
        
 			std::cout << "Insert an integer to remove: ";
 			std::cin >> input;
