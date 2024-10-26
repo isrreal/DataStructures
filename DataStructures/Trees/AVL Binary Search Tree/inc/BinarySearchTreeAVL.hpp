@@ -8,11 +8,10 @@
 class BinarySearchTreeAVL {
 private:
     Node* root;
-    int sizeRecursive(Node* node);
-    int treeHeightRecursive(Node* node);
-    // int iterativeHeight(Node* node);
+    size_t sizeRecursive(Node* node);
+    size_t heightRecursive(Node* node);
     int balance(Node* node);
-    int nodeHeight(Node* node);
+    size_t nodeHeight(Node* node);
     Node* insertRecursive(Node* node, int value);
     void printPreOrderRecursive(Node* node) const;
     void printInOrderRecursive(Node* node) const;
@@ -34,10 +33,9 @@ public:
     void preOrder();
     void inOrder();
     void postOrder();
-    void deleteKey(int value);
-    // int getTreeHeight();
-    int getTreeSize();
-    // int getSizeIterative();
+	bool remove(int value);
+    size_t getSize();
+    size_t getHeight();
     void clone();
     Node* getRoot() const;
     int getMin();
