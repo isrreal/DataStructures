@@ -1,5 +1,6 @@
-#ifndef NODE_H
-#define NODE_H
+#ifndef NODE_HPP
+#define NODE_HPP
+
 #include <iostream>
     struct Node {
         int key;
